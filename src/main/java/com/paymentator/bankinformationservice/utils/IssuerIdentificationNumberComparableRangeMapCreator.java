@@ -14,7 +14,6 @@ public class IssuerIdentificationNumberComparableRangeMapCreator {
             Map<String, String> iinRangeByBankId) {
         Map<IssuerIdentificationNumberRange, String> map = new HashMap<>();
         for (Entry<String, String> entry : iinRangeByBankId.entrySet()) {
-            String key2 = entry.getKey();
             if (entry.getKey().contains("*") && entry.getKey().contains("-")) {
                 map.put(handleEnhancedRangeValue(entry.getKey()), entry.getValue());
             } else if (entry.getKey().contains("-")) {
