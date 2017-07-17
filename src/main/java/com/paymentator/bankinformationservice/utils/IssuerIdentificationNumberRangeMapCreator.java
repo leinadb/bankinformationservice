@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.paymentator.bankinformationservice.model.IssuerIdentificationNumberRange;
 
-public class IssuerIdentificationNumberComparableRangeMapCreator {
+public class IssuerIdentificationNumberRangeMapCreator {
 
     public Map<IssuerIdentificationNumberRange, String> createIinRangeMap(
             Map<String, String> iinRangeByBankId) {

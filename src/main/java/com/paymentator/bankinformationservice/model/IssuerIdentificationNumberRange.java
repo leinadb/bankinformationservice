@@ -11,6 +11,15 @@ public final class IssuerIdentificationNumberRange {
         this.maxRange = maxRange;
     }
 
+    public Integer getMinRange() {
+        return minRange;
+    }
+
+    public Integer getMaxRange() {
+        return maxRange;
+    }
+
+
     @Override
     public String toString() {
         return "Min: " + minRange + "Max: " + maxRange;

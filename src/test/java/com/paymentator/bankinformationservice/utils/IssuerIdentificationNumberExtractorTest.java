@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.paymentator.bankinformationservice.utils.IssuerIdentificationNumberExtractor;
-
 public class IssuerIdentificationNumberExtractorTest {
 
 
@@ -17,16 +15,16 @@ public class IssuerIdentificationNumberExtractorTest {
     }
 
     @Test
-    public void shouldReturnInputNumberIfItsLengthIsSmallerThanIINItself() {
+    public void shouldReturnInputNumberWithPaddingZeroesIfItsLengthIsSmallerThanIinItself() {
         IssuerIdentificationNumberExtractor extractor = new IssuerIdentificationNumberExtractor();
         String iin = extractor.getIinFromPan("12002");
-        assertEquals("12002", iin);
+        assertEquals("120020", iin);
     }
 
     @Test
     public void shouldReturnNumberWithoutAnyWhitespaces() {
         IssuerIdentificationNumberExtractor extractor = new IssuerIdentificationNumberExtractor();
         String iin = extractor.getIinFromPan(" 12 0   0 2 ");
-        assertEquals("12002", iin);
+        assertEquals("120020", iin);
     }
 }
